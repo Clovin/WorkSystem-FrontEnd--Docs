@@ -1,0 +1,29 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 16px;
+}
+
+.row {
+  margin-right: -10px;
+  margin-left: -10px
+}
+
+.row:after, .row:before {
+  display: table;
+  content: ""
+}
