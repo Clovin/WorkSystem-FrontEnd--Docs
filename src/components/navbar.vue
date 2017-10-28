@@ -39,7 +39,7 @@
       /*
        *  use for toggle nav__group visible
        *
-       *  @params  {Object} navGroup   one nav group of the navs
+       *  @params  {Object} navGroup - one nav group of the navs
        **/
       toggleVisible (navGroup) {
         navGroup.visible = !navGroup.visible
