@@ -29,7 +29,7 @@
     "title": "路由",
     "list": [
       {
-        "path": "/router",
+        "path": "/router/introduction",
         "name": "路由简介"
       }
     ]
@@ -47,8 +47,12 @@
     "title": "工具",
     "list": [
       {
-        "path": "/util",
-        "name": "util.js"
+        "path": "/utils/introduction",
+        "name": "工具简介"
+      },
+      {
+        "path": "/utils/cookieManager",
+        "name": "Cookie Manager"
       }
     ]
   },

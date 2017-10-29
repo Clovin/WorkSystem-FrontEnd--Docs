@@ -24,6 +24,18 @@ export default new Router({
     {
       path: '/api/postAPI',
       component: resolve => require(['../pages/API/postAPI.md'], resolve)
+    },
+    {
+      path: '/router/introduction',
+      component: resolve => require(['../pages/router/introduction.md'], resolve)
+    },
+    {
+      path: '/utils/introduction',
+      component: resolve => require(['../pages/utils/introduction.md'], resolve)
+    },
+    {
+      path: '/utils/cookieManager',
+      component: resolve => require(['../pages/utils/cookieManager.md'], resolve)
     }
   ],
   mode: 'history',
