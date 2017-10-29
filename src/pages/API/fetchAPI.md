@@ -12,7 +12,7 @@
 
 <h2 id="APIFunction">API Function</h2>
 
-<h3 id="fetchIsLogin">fetchIsLogin</h3>
+<h3 id="fetchIsLogin">fetchIsLogin ()</h3>
 - 简介
 
   获取用户是否登录
@@ -57,7 +57,7 @@
     ]
   }
   ```
-<h3 id="fetchTasks">fetchTasks</h3>
+<h3 id="fetchTasks">fetchTasks (place, isp)</h3>
 - 简介
 
   获取任务列表
@@ -106,7 +106,7 @@
     ]
   }
   ```
-<h3 id="fetchExp">fetchExp</h3>
+<h3 id="fetchExp">fetchExp ()</h3>
 
 - 简介
 
@@ -135,7 +135,7 @@
   }
   ```
   
-<h3 id="fetchExtraWork">fetchExtraWork</h3>
+<h3 id="fetchExtraWork">fetchExtraWork ()</h3>
 
 -  简介
 
@@ -157,7 +157,7 @@
      "registerDay": "2017-08-15:16.30"
    }
    ```
-<h3 id="fetchPersonExtraWork">fetchPersonExtraWork</h3>
+<h3 id="fetchPersonExtraWork">fetchPersonExtraWork ()</h3>
 
 -  简介
 
@@ -179,7 +179,7 @@
    }
    ```
    
-<h3 id="fetchPersonToday">fetchPersonToday</h3>
+<h3 id="fetchPersonToday">fetchPersonToday ()</h3>
 
 -  简介
 
@@ -223,7 +223,7 @@
 
    ```
    
-<h3 id="fetchLogout">fetchLogout</h3>
+<h3 id="fetchLogout">fetchLogout ()</h3>
 
 -  简介
 
