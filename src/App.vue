@@ -62,6 +62,7 @@
     float: left;
     width: calc(100% - 15rem);
     height: 100%;
+    max-width: 1100px;
     padding: 2rem 1rem 2rem .5rem;
     overflow: auto;
   }

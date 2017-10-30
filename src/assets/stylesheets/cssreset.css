@@ -51,9 +51,9 @@ a {
   -webkit-backface-visibility: hidden;
 }
 
-li {
-  list-style: none;
-}
+/*li {*/
+  /*list-style: none;*/
+/*}*/
 
 /*::-webkit-scrollbar {*/
 /*width: 5px;*/

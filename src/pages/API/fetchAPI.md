@@ -152,9 +152,17 @@
   
    ```json
    {
-     "states": 0,
-     "success": "success",
-     "registerDay": "2017-08-15:16.30"
+     "extra_work": [
+       {
+         "work_number": "1547",
+         "status": 0,
+         "add_time": "2017-10-28T07:52:02.099",
+         "extra_work_time": "2017-10-28:16.30",
+         "name": "XXX",
+         "id": 127
+       }
+     ],
+     "success": "success"
    }
    ```
 <h3 id="fetchPersonExtraWork">fetchPersonExtraWork ()</h3>
@@ -220,7 +228,6 @@
      ],
      "success": "success"
    }
-
    ```
    
 <h3 id="fetchLogout">fetchLogout ()</h3>

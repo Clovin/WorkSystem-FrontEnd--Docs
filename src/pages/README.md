@@ -9,7 +9,7 @@
 该项目是中山学院网维的工作系统前端，基于Vue.js实现，使用了Vue全家桶（vuex，vue-router）
 
 <h2 id="structure">项目结构</h2>
-```$xslt
+```text
 ├── index.html                        # 入口html
 ├── build/                            # webpack配置文件
 │   ├── dev-server.js                 # 本地测试服务器

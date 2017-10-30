@@ -36,6 +36,14 @@ export default new Router({
     {
       path: '/utils/cookieManager',
       component: resolve => require(['../pages/utils/cookieManager.md'], resolve)
+    },
+    {
+      path: '/Vuex/introduction',
+      component: resolve => require(['../pages/Vuex/introduction.md'], resolve)
+    },
+    {
+      path: '/Vuex/actions',
+      component: resolve => require(['../pages/Vuex/actions.md'], resolve)
     }
   ],
   mode: 'history',

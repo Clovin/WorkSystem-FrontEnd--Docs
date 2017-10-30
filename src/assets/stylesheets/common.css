@@ -18,21 +18,21 @@ body {
   font-size: 16px;
 }
 
-.row:after, .row:before {
-  content: "020";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+/*.row:after, .row:before {*/
+  /*content: "020";*/
+  /*display: block;*/
+  /*height: 0;*/
+  /*clear: both;*/
+  /*visibility: hidden;*/
+/*}*/
 
-.markdown-body ul li {
-  list-style: disc;
-}
+/*.markdown-body ul li {*/
+  /*list-style: disc;*/
+/*}*/
 
-.markdown-body ol li {
-  list-style: decimal;
-}
+/*.markdown-body ol li {*/
+  /*list-style: decimal;*/
+/*}*/
 
 .markdown-body pre {
   overflow-y: auto;

@@ -38,8 +38,12 @@
     "title": "Vuex",
     "list": [
       {
-        "path": "/vuex/actions",
-        "name": "actions"
+        "path": "/Vuex/introduction",
+        "name": "Vuex 介绍"
+      },
+      {
+        "path": "/Vuex/actions",
+        "name": "Actions"
       }
     ]
   },
