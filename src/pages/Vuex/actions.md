@@ -54,7 +54,7 @@
   3. 若获取到数据
      - 如果未登录
        1. 执行 endLoading action
-       2. return token
+       2. 返回 Promise(token)
      - 如果已登录
        1. 修改 base 模块中的 info,isLog,isWorked,todayWorkers,nowPlace
        
@@ -63,6 +63,7 @@
           createWork 模块中的 choosePlace
           
           createRepair 模块中的 userPlace
+       2. 返回 Promise()
   4. 若catch捕获到错误
      
      1. 执行 openMsg action，向用户表明出现错误
@@ -95,7 +96,7 @@
   2. 判断数据是否获取成功
      - 获取成功
        1. 对数据进行排序，处理等操作
-       2. 修改 tasks 模块的tasks，workers数据
+       2. 修改 tasks module的tasks，workers数据
        3. 执行  endLoading action
      - 获取失败
        1. 执行 openMsg action，跟用户说明情况
@@ -147,7 +148,7 @@
   2. 判断数据是否获取成功
      -  如果数据获取成功
         1.  对数据进行处理
-        2.  返回数据
+        2.  返回 Promise(data)
      -  如果数据没获取成功
         1. 执行 openMsg action，跟用户说明情况
         2. 执行 endLoading action
@@ -324,6 +325,17 @@
 
   ```
   
+- 细节
+
+  1. 执行 beginLoading
+  2. 请求各个API接口
+  3. 判断数据是否获取成功
+     - 如果请求成功
+       1. 返回一个Promise(Object)
+     - 如果请求失败
+       1. 执行 openMsg, 告知用户错误信息
+       2. 执行 endLoading
+  
 <h3 id="FETCH_EXP">FETCH_EXP ({dispatch})</h3>
 
 - 简介
@@ -357,6 +369,16 @@
   }
   ```
   
+- 细节
+
+  1. 执行 beginLoading
+  2. 发送请求
+     - 如果请求成功
+       1. 返回 Promise(data)
+     - 如果请求失败
+       1. 执行 openMsg, 告知用户错误信息
+       2. 执行 endLoading    
+  
 <h3 id="FETCH_EXTRA_WORK">FETCH_EXTRA_WORK ({dispatch})</h3>
 
 - 简介
@@ -389,6 +411,15 @@
     "success": "success"
   }
   ```
+
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading 
   
 <h3 id="FETCH_PERSON_EXTRA_WORK">FETCH_PERSON_EXTRA_WORK ({dispatch})</h3>
 
@@ -415,6 +446,15 @@
     "registerDay": "2017-08-15:16.30"
   }
   ```
+  
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
 
 <h3 id="FETCH_PERSON_TODAY">FETCH_PERSON_TODAY ({dispatch})</h3>
 
@@ -462,6 +502,15 @@
     "success": "success"
   }
   ```
+
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
   
 <h3 id="FETCH_LOGOUT">FETCH_LOGOUT ({dispatch})</h3>
 
@@ -480,6 +529,15 @@
 - 返回值
 
   Promise()
+  
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 刷新页面
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
   
 <h3 id="POST_LOGIN">POST_LOGIN ({commit, dispatch}, postData)</h3>
 
@@ -523,6 +581,20 @@
     success: 'success'
   }
   ```
+  
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         - 判断数据是否正确获取
+           - 如果正确
+             1. 设置各个值
+             2. 返回Promise(Object)
+           - 如果错误
+             1. 返回Promise(errorObject)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
   
 <h3 id="POST_ADD_EXP">POST_ADD_EXP ({dispatch}, postData)</h3>
 
@@ -580,6 +652,15 @@
   }
   ```
   
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
+  
 <h3 id="POST_EDIT_AN">POST_EDIT_AN ({dispatch}, postData)</h3>
 
 - 简介
@@ -610,6 +691,15 @@
   }
   ```
   
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
+  
 <h3 id="POST_SIGN_WORK">POST_SIGN_WORK ({dispatch}, postData)</h3>
 
 - 简介
@@ -637,6 +727,15 @@
     "registerDay": "2017-09-04:16.30"
   }
   ```
+
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
   
 <h3 id="POST_RES_SIGN_WORK">POST_RES_SIGN_WORK ({dispatch}, postData)</h3>
 
@@ -666,6 +765,15 @@
     "success": "add success"
   }
   ```
+  
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
 
 <h3 id="POST_SET_INFO">POST_SET_INFO ({dispatch}, postData)</h3>
 
@@ -689,6 +797,22 @@
 - 返回值
 
   Promise()
+  
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         - 判断数据是否正确获取
+           - 如果正确
+             1. 设置各个值
+             2. 执行 openMsg, 告知用户信息
+             3. 执行 endLoading
+           - 如果错误
+             1. 执行 openMsg, 告知用户错误信息
+             2. 执行 endLoading
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
 
 <h3 id="POST_SET_PASSWORD">POST_SET_PASSWORD ({dispatch}, postData)</h3>
 
@@ -712,6 +836,20 @@
 - 返回值
 
   Promise()
+  
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         - 判断数据是否正确获取
+           - 如果正确
+             1. 刷新页面
+           - 如果错误
+             1. 执行 openMsg, 告知用户错误信息
+             2. 执行 endLoading
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
   
 <h3 id="POST_CHANGE_TASK">POST_CHANGE_TASK ({dispatch}, postData)</h3>
 
@@ -756,6 +894,21 @@
 - 返回值
 
   Promise()
+  
+- 细节
+  1. 执行 beginLoading
+  2. 请求数据
+     - 如果数据请求成功
+       1. 判断数据是否通过
+          - 若通过
+            1. 设置各个值
+            2. 执行 FETCH_TASKS
+            2. 返回 Promise()
+          - 若未通过
+            1. 对应的操作,并告知用户
+     - 如果失败
+       1. 执行 openMsg, 告知用户错误
+       2. 执行 endLoading
 
 <h3 id="POST_SEARCH">POST_SEARCH ({dispatch}, postData)</h3>
 
@@ -806,6 +959,15 @@
   }
   ```
   
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
+  
 <h3 id="POST_SEARCH_TODAY">POST_SEARCH_TODAY ({dispatch}, postData)</h3>
 
 - 简介
@@ -848,6 +1010,15 @@
   }
   ```
   
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
+  
 <h3 id="POST_ADD_TASK">POST_ADD_TASK ({dispatch}, postData)</h3>
 
 - 简介
@@ -875,6 +1046,15 @@
     }
   }
   ```
+  
+- 细节
+    1. 执行 beginLoading
+    2. 发送请求
+       - 如果请求成功
+         1. 返回 Promise(data)
+       - 如果请求失败
+         1. 执行 openMsg, 告知用户错误信息
+         2. 执行 endLoading
   
 <h3 id="POST_CHECK_WORK">POST_CHECK_WORK ({dispatch, commit}, postData)</h3>
 
@@ -917,3 +1097,19 @@
        "success": true
      }
      ```
+     
+- 细节
+  1. 执行 beginLoading
+  2. 请求数据
+     - 如果数据请求成功
+       1. 执行 endLoading, closeSth
+       2. 判断数据是否通过
+          - 若通过
+            1. 设置各个值
+            2. 返回 Promise(data)
+          - 若未通过
+            1. 执行 openMsg, 告知用户错误信息
+     - 如果失败
+       1. 执行 openMsg, 告知用户错误
+       2. 执行 endLoading
+       3. 执行 closeSth

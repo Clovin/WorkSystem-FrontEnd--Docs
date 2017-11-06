@@ -44,6 +44,10 @@
       {
         "path": "/Vuex/actions",
         "name": "Actions"
+      },
+      {
+        "path": "/Vuex/module/base",
+        "name": "base module"
       }
     ]
   },

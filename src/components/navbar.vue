@@ -100,4 +100,8 @@
     max-height: 50rem;
   }
 
+  li{
+    list-style: none;
+  }
+
 </style>

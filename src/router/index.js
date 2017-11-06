@@ -44,6 +44,10 @@ export default new Router({
     {
       path: '/Vuex/actions',
       component: resolve => require(['../pages/Vuex/actions.md'], resolve)
+    },
+    {
+      path: '/Vuex/module/base',
+      component: resolve => require(['../pages/Vuex/module/base.md'], resolve)
     }
   ],
   mode: 'history',
