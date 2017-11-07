@@ -1,27 +1,39 @@
-# createRepair module
-本文是对 createRepair module 的介绍
+# newTask module
+本文是对 newTask module 的介绍
 
 ## 目录
 - [State](#State)
-  - [repairStatus](#repairStatus)
+  - [taskProperty](#taskProperty)
+  - [taskStatus](#taskStatus)
   - [userPhone](#userPhone)
   - [userPlace](#userPlace)
   - [userHouse](#userHouse)
   - [netInfo](#netInfo)
   - [netAccount](#netAccount)
-  - [repairDetail](#repairDetail)
-  - [repairWorkers](#repairWorkers)
+  - [introduction](#introduction)
 - [Mutation](#Mutation)
-  - [SET_REPAIR_STATUS](#SET_REPAIR_STATUS)
-  - [SET_USER_PHONE](#SET_USER_PHONE)
-  - [SET_USER_PLACE](#SET_USER_PLACE)
-  - [SET_USER_HOUSE](#SET_USER_HOUSE)
-  - [SET_NET_INF](#SET_NET_INF)
-  - [SET_NET_ACCOUNT](#SET_NET_ACCOUNT)
-  - [SET_REPAIR_DETAIL](#SET_REPAIR_DETAIL)
-  - [SET_REPAIR_WORKERS](#SET_REPAIR_WORKERS)
+  - [SET_NT_PROPERTY](#SET_NT_PROPERTY)
+  - [SET_NT_STATUS](#SET_NT_STATUS)
+  - [SET_NT_USER_PHONE](#SET_NT_USER_PHONE)
+  - [SET_NT_USER_PLACE](#SET_NT_USER_PLACE)
+  - [SET_NT_USER_HOUSE](#SET_NT_USER_HOUSE)
+  - [SET_NT_NET_INFO](#SET_NT_NET_INFO)
+  - [SET_NT_NET_ACCOUNT](#SET_NT_NET_ACCOUNT)
+  - [SET_NT_INTRODUCTION](#SET_NT_INTRODUCTION)
   
 <h2 id="State">State</h2>
+
+<h3 id="taskProperty">taskProperty</h3>
+
+- 简介
+
+  任务性质
+  
+- 值
+  
+  {String}
+  
+  可选值为：'普通', '新装', '工单', '投诉'
 
 <h3 id="repairStatus">repairStatus</h3>
 
@@ -93,7 +105,7 @@
 
   {String}
   
-<h3 id="repairDetail">repairDetail</h3>
+<h3 id="introduction">introduction</h3>
 
 - 简介
   
@@ -103,68 +115,52 @@
 
   {String} 不能超过200个字节
   
-<h3 id="repairWorkers">repairWorkers</h3>
-
-- 简介
-
-  完成该报修的人员
-  
-- 值
-
-  {Array}
-  
-  ```js
-  ['1547 XXX']
-  ```
-  
 <h2 id="Mutation">Mutation</h2>
 
-<h3 id="SET_REPAIR_STATUS">SET_REPAIR_STATUS</h3>
+<h3 id="SET_NT_PROPERTY">SET_NT_PROPERTY</h3>
 
 - 简介
 
-  设置repairStatus值
+  设置taskProperty值
+
+<h3 id="SET_NT_STATUS">SET_NT_STATUS</h3>
+
+- 简介
+
+  设置taskStatus值
   
-<h3 id="SET_USER_PHONE">SET_USER_PHONE</h3>
+<h3 id="SET_NT_USER_PHONE">SET_NT_USER_PHONE</h3>
 
 - 简介
 
   设置userPhone值
   
-<h3 id="SET_USER_PLACE">SET_USER_PLACE</h3>
+<h3 id="SET_NT_USER_PLACE">SET_NT_USER_PLACE</h3>
 
 - 简介
 
   设置userPlace
   
-<h3 id="SET_USER_HOUSE">SET_USER_HOUSE</h3>
+<h3 id="SET_NT_USER_HOUSE">SET_NT_USER_HOUSE</h3>
 
 - 简介
 
   设置userHouse
   
-<h3 id="SET_NET_INFO">SET_NET_INFO</h3>
+<h3 id="SET_NT_NET_INFO">SET_NT_NET_INFO</h3>
 
 - 简介
 
   设置netInfo值
   
-<h3 id="SET_NET_ACCOUNT">SET_NET_ACCOUNT</h3>
+<h3 id="SET_NT_NET_ACCOUNT">SET_NT_NET_ACCOUNT</h3>
 
 - 简介
 
   设置netAccount值
   
-<h3 id="SET_REPAIR_DETAIL">SET_REPAIR_DETAIL</h3>
+<h3 id="SET_NT_INTRODUCTION">SET_NT_INTRODUCTION</h3>
 
 - 简介
 
-  设置repairDetail值
-  
-<h3 id="SET_REPAIR_WORKERS">SET_REPAIR_WORKERS</h3>
-
-- 简介
-
-  设置repairWorkers
-
-
+  设置introduction值

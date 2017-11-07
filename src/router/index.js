@@ -48,6 +48,26 @@ export default new Router({
     {
       path: '/Vuex/module/base',
       component: resolve => require(['../pages/Vuex/module/base.md'], resolve)
+    },
+    {
+      path: '/Vuex/module/createRepair',
+      component: resolve => require(['../pages/Vuex/module/createRepair.md'], resolve)
+    },
+    {
+      path: '/Vuex/module/createWork',
+      component: resolve => require(['../pages/Vuex/module/createWork.md'], resolve)
+    },
+    {
+      path: '/Vuex/module/newTask',
+      component: resolve => require(['../pages/Vuex/module/newTask.md'], resolve)
+    },
+    {
+      path: '/Vuex/module/overview',
+      component: resolve => require(['../pages/Vuex/module/overview.md'], resolve)
+    },
+    {
+      path: '/Vuex/module/tasks',
+      component: resolve => require(['../pages/Vuex/module/tasks.md'], resolve)
     }
   ],
   mode: 'history',

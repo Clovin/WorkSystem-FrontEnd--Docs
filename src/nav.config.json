@@ -48,6 +48,26 @@
       {
         "path": "/Vuex/module/base",
         "name": "base module"
+      },
+      {
+        "path": "/Vuex/module/createRepair",
+        "name": "createRepair module"
+      },
+      {
+        "path": "/Vuex/module/createWork",
+        "name": "createWork module"
+      },
+      {
+        "path": "/Vuex/module/newTask",
+        "name": "newTask module"
+      },
+      {
+        "path": "/Vuex/module/overview",
+        "name": "overview module"
+      },
+      {
+        "path": "/Vuex/module/tasks",
+        "name": "tasks module"
       }
     ]
   },
