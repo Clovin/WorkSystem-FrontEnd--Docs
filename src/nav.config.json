@@ -3,8 +3,40 @@
     "title": "组件",
     "list": [
       {
-        "path": "/button",
-        "name": "按钮组件"
+        "path": "/components/button",
+        "name": "按钮"
+      },
+      {
+        "path": "/components/checkBox",
+        "name": "checkBox选择器"
+      },
+      {
+        "path": "/components/checkBox",
+        "name": "多项checkBox选择器"
+      },
+      {
+        "path": "/components/dropSelecter",
+        "name": "下拉菜单选择器"
+      },
+      {
+        "path": "/components/loading",
+        "name": "loading组件"
+      },
+      {
+        "path": "/components/selectBox",
+        "name": "selectBox选择器"
+      },
+      {
+        "path": "/components/shadow",
+        "name": "阴影组件"
+      },
+      {
+        "path": "/components/task",
+        "name": "任务组件"
+      },
+      {
+        "path": "/components/textInput",
+        "name": "文本输入框组件"
       }
     ]
   },

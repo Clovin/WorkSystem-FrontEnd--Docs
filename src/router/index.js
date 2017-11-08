@@ -68,6 +68,42 @@ export default new Router({
     {
       path: '/Vuex/module/tasks',
       component: resolve => require(['../pages/Vuex/module/tasks.md'], resolve)
+    },
+    {
+      path: '/components/button',
+      component: resolve => require(['../pages/components/button.md'], resolve)
+    },
+    {
+      path: '/components/checkBox',
+      component: resolve => require(['../pages/components/checkBox.md'], resolve)
+    },
+    {
+      path: '/components/checkBoxGroup',
+      component: resolve => require(['../pages/components/checkBoxGroup.md'], resolve)
+    },
+    {
+      path: '/components/dropSelecter',
+      component: resolve => require(['../pages/components/dropSelecter.md'], resolve)
+    },
+    {
+      path: '/components/loading',
+      component: resolve => require(['../pages/components/loading.md'], resolve)
+    },
+    {
+      path: '/components/selectBox',
+      component: resolve => require(['../pages/components/selectBox.md'], resolve)
+    },
+    {
+      path: '/components/shadow',
+      component: resolve => require(['../pages/components/shadow.md'], resolve)
+    },
+    {
+      path: '/components/task',
+      component: resolve => require(['../pages/components/task.md'], resolve)
+    },
+    {
+      path: '/components/textInput',
+      component: resolve => require(['../pages/components/textInput.md'], resolve)
     }
   ],
   mode: 'history',

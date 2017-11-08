@@ -34,6 +34,8 @@
   {String}
   
   可选值为：'普通', '新装', '工单', '投诉'
+  
+  后端代表数据： 0, 2, 1, 3
 
 <h3 id="repairStatus">repairStatus</h3>
 
@@ -46,6 +48,8 @@
   {String}
   
   可选值为：'已解决', '推迟', '已上报', '未解决'
+  
+  后端代表数据： 1, 2, 3, 0
   
 <h3 id="userPhone">userPhone</h3>
 
